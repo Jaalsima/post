@@ -2,7 +2,7 @@
     <x-slot name="title">
         lista de Posts
     </x-slot>
-    <h1>lista de Posts</h1>
+    <h1 class="title">Lista de Posts</h1>
 
     <ul>
         @forelse ($posts as $post)
@@ -20,5 +20,6 @@
         @empty
             <h2>Aún no hay Posts.</h2>
         @endforelse
+        {{ $posts->links() }}
     </ul>
 </x-layouts.layout>
