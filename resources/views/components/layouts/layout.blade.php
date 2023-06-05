@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         * {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,6 +17,11 @@
 
         body {
             background-image: url('{{ asset('images/bg20.jpg') }}');
+        }
+
+        .div-h-i {
+            width: 50%;
+            margin: 100px auto;
         }
 
         .active {
@@ -65,6 +71,7 @@
             font-size: 20px;
             font-weight: bold;
             color: #355aa5;
+            text-align: center;
         }
 
         .container {
@@ -94,11 +101,8 @@
             margin-top: 10px;
             margin-bottom: 10px;
             border: rgb(2, 156, 207) solid 1px;
+            outline: none;
         }
-
-        /* .form-ta {
-            width: 100%;
-        } */
 
         .form-b {
             border: none;
@@ -111,13 +115,18 @@
             font-size: 14px;
             font-weight: bold;
             width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            /* Agrega una sombra al botón */
+            transition: background-color 1.2s ease;
+            /* Agrega una transición suave al cambio de color de fondo */
         }
 
         .form-b:hover {
-            background-color: rgb(2, 79, 105);
+            background-color: rgb(59, 116, 195);
             color: white;
             text-decoration: none;
             cursor: pointer;
+            font-size: 14.37px;
         }
     </style>
     @livewireStyles

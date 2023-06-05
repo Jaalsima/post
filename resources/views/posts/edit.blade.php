@@ -3,12 +3,11 @@
         Editar Post
     </x-slot>
     <div class="container">
-        <h1 class="form-t">Formulario de Edición de Posts</h1>
+        <h1 class="form-t">Editar Post</h1>
         <form action="{{ route('posts.update', $post) }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('put')
             <div>
-                <label for="title" class="form-l">Título</label>
                 <input type="text" name="title" id="title" value="{{ $post->title }}" class="form-i"
                     placeholder="Título" autofocus>
                 @error('title')
@@ -16,7 +15,6 @@
                 @enderror
             </div>
             <div>
-                <label for="content" class="form-l">Contenido</label>
                 <textarea name="content" id="content" rows="5" class="form-ta">{{ $post->content }}</textarea>
                 @error('content')
                     <div style="color: red; border: 1px dotted red; background-color: pink;">{{ $message }}</div>|

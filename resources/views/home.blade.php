@@ -2,5 +2,6 @@
     <x-slot name="title">
         Inicio
     </x-slot>
-    <h1 class="title">Inicio</h1>
+    <div class="div-h-i"><img src="{{ asset('images/bg14.jpg') }}" alt="Inicio"></div>
+    <h1 class="title">BLOG CODERMAN</h1>
 </x-layouts.layout>
